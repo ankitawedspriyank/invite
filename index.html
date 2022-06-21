@@ -5,6 +5,22 @@
 <title>Wedding Invitation </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+<script>
+  function SubForm (){
+      $.ajax({
+          url:'https://api.apispreadsheets.com/data/9VxZ8KbQzL0qEIwk/',
+          type:'post',
+          data:$("#myForm").serializeArray(),
+          
+      });
+      window.open(
+            "going.html")
+  }
+  </script>
 <script src=
 	"https://smtpjs.com/v3/smtp.js">
 </script>
@@ -103,7 +119,7 @@ p {line-height: 2}
 <div class="w3-container w3-padding-64 w3-pale-red " id="us">
     <div class="w3-content">
       <h1 class="w3-center w3-text-grey"><b>Eshendra Dixit & Ankita Awasthi</b></h1>
-      <img class="w3-round w3-image" src="https://user-images.githubusercontent.com/71128324/174437881-677d4f5d-ad58-483b-91d6-846e28f6a637.jpeg" style="width:100%;margin:32px 0">
+      <img class="w3-round w3-image" src="https://user-images.githubusercontent.com/71128324/174437805-1788dc14-6661-4fee-a848-43168b97f106.jpeg" style="width:100%;margin:32px 0">
       <p><i>You all know us. And we all know you. We are getting married, and you all are cordially invited </i>
       </p><br>
       
@@ -119,10 +135,6 @@ p {line-height: 2}
       <div class="centered ">
         <div class=" w3-text-white w3-center">
           <br>
-          <br>
-          <br>
-          <br>
-	  <br>
           <br>
           <br>
           <br>
@@ -150,8 +162,8 @@ p {line-height: 2}
     <div class="w3-container w3-white w3-center">
       <h1 class="w3-wide">CAN YOU COME?</h1>
       <p>We really hope you can make it.</p>
-      <form onsubmit="JavaScript:passValue();sendEmail();">
-        <input class="w3-input w3-border" type="text" placeholder="Name(s)" name ="name" id="text" required>
+      <form id="myForm" onsubmit=" passValue();SubForm();  return false">
+        <input class="w3-input w3-border" type="text" placeholder="Name(s)" name ="Priyank_Guests" id="text" required>
          
       
       <p><i>Sincerely,Eshendra Dixit & Ankita Awasthi</i></p>
